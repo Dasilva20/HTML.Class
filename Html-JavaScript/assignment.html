@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+
+    <article class="shape_container">
+        <div id="shapes"></div>
+        <h3 id="shape_name"></h3>
+    </article>
+
+    <button class="shape-btn" data-shape="rectangle">Rectangle</button>
+    <button class="shape-btn" data-shape="line">Line</button>
+    <button class="shape-btn" data-shape="triangle">Triangle</button>
+    <button class="shape-btn" data-shape="circle">Circle</button>
+    <button class="shape-btn" data-shape="trapezium">Trapezium</button>
+
+<script>
+    const canvas = document.getElementById('canvas');
+    const shapeButtons = document.querySelectorAll('.shape-btn');
+
+    // An object to store the drawing functions for each shape
+    const shapeDrawingFunctions = {
+        rectangle: drawRectangle,
+        line: drawLine,
+        triangle: drawTriangle,
+        circle: drawCircle,
+        trapezium: drawTrapezium
+    };
+
+    // Initial shape
+    let currentShape = null;
+
+    shapeButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            const shapeName = this.getAttribute("data-shape");
+            drawShape(shapeName);
+        });
+    });
+
+    function drawShape(shapeName) {
+        const context = canvas.getContext('2d');
+        context.clearRect(0, 0, canvas.width, canvas.height);
+
+        if (shapeDrawingFunctions[shapeName]) {
+            shapeDrawingFunctions[shapeName](context);
+            currentShape = shapeName;
+        }
+    }
+
+    // Drawing functions for each shape
+    function drawRectangle(context) {
+        context.fillStyle = 'violet';
+        context.fillRect(0, 0, 400, 100);
+    }
+
+    function drawLine(context) {
+        context.beginPath();
+        context.moveTo(70, 30);
+        context.lineTo(100, 100);
+        context.strokeStyle = 'red';
+        context.stroke();
+    }
+
+    function drawTriangle(context) {
+        context.beginPath();
+        context.moveTo(20, 100);
+        context.lineTo(100, 20);
+        context.lineTo(176, 100);
+        context.lineTo(20, 100);
+        context.strokeStyle = 'red';
+        context.fillStyle = 'yellow';
+        context.fill();
+        context.stroke();
+    }
+
+    function drawCircle(context) {
+        context.beginPath();
+        context.arc(95, 70, 50, 0, 2 * Math.PI);
+        context.fillStyle = 'green';
+        context.strokeStyle = 'blue';
+        context.fill();
+        context.stroke();
+    }
+
+    function drawTrapezium(context) {
+        context.beginPath();
+        context.moveTo(20, 20);
+        context.lineTo(100, 20);
+        context.lineTo(175, 100);
+        context.lineTo(20, 100);
+        context.lineTo(20, 20);
+        context.strokeStyle = 'indigo';
+        context.fillStyle = 'turquoise';
+        context.fill();
+        context.stroke();
+    }
+</script>
+</body>
+</html>
+

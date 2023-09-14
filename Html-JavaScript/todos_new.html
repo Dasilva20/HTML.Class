@@ -1,0 +1,50 @@
+d <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        var date = document.querySelector('#date');
+        var text = document.querySelector('#date');
+        var btn = document.querySelector('#add');
+
+        btn.addEventListener('click', ()=>{
+            if((text.value.length== 0)|| (date.value.length() == '0')){
+                alert("Kindly provide a task")
+            }
+            else{
+                document.querySelector('#task').innerHTML += `
+                <div class = "todo">
+                    <span id = "todoName">
+                        ${text.value}
+                        ${date.value}
+
+                        </span>
+                        <button class = "remove">
+                            x </button>
+                </div>
+
+
+            `;
+
+            document.querySelector('#text').valu ="";
+
+            var currentTask =document.querySelector('.remove');
+
+            for(var i = 0; i < currentTask.length; i++){
+                currentTask[i].onclick =
+                function(){
+                    this.parentNode.remove();
+                }
+            }
+            }
+        })
+    </script>  
+ </body>
+</html>

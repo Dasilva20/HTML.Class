@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        // var date = new Date()
+        // var day = date.getDay()
+        // var newDate = date.getDate()
+        // var year = date.getFullYear()
+        // var month = date.getMonth()
+        // document.write()
+
+        // // tenary operator
+        // // ? means i want 
+        // // : means else
+        // var newMonth = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Agu", "Sep", "Oct", "Nov", "Dec"]
+        // var dw = ["Sun", "Mon", "Tue", "Wed", "Thr", "Fri", "Sat",]
+        // // document.write(dw[6])
+        // document.write(`${dw[6]}, ${newDate}, ${newMonth[6]}, ${year}`)
+
+        // // Time function
+        // var time = new Date()
+        // var hour = time.getHours()
+        // var min = time.getMinutes()
+        // var sec = time.getSeconds()
+        // // document.write(hour)
+        // newHour = hour <= 12?hour:hour-12
+        // document.write(newHour)
+
+        // var ampm = hour >= 12 ?'pm': 'am'
+        // document.write(  hour + ":" + min + ":" + sec + ampm)
+
+
+        function clock(){
+            var time = new Date()
+        var hour = time.getHours()
+        var min = time.getMinutes()
+        var sec = time.getSeconds()
+        const container = document.querySelector("div")
+        newHour = hour <= 12?hour:hour-12
+        var ampm = hour >= 12 ?'pm': 'am'
+        // space = hour || min ||sec <= 9? 0:
+         space1 = newHour <= 9? "0"+newHour:newHour 
+         space2 = min <= 9? "0"+min:min
+         space3 = sec <= 9? "0"+sec:sec
+        res = space1 + ":" + space2 + ":" + space3 + ampm
+        container.innerHTML = res
+        }
+        setInterval(clock, 1000)    
+
+
+        // function Date(){
+        //     var date = new Date()
+        // var newDate = date.getDate()
+        // var year = date.getFullYear()
+        // var month = date.getMonth()
+
+        // const container = document.querySelector("div")
+
+        // var first_1 = newDate == 1? "st": []
+        // var first_1i = newDate == 21? "st": []
+        // var first_1ii = newDate == 31? "st": []
+
+        // var second_2 = newDate == 2? "nd": []
+        // var second_2i = newDate == 22? "nd": []
+
+        // var third_3 = newDate == 3? "rd": []    
+        // var third_3i = newDate == 23? "rd": []
+
+        // var first_m = month == 1? "st": []
+        // var second_m = month == 2? "nd": []
+        // var third_m = month == 3? "rd": []
+        
+        // get = newDate + "/" + month + "/" + year
+
+        // container.innerHTML = get 
+        // }
+        // setInterval(Date, 86400000)
+     </script>
+ </body>
+ </html>

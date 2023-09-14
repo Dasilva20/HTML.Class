@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="first" placeholder="Enter first number" name="first">
+    <input type="text" id="second" placeholder="Enter second number" name="second">
+    <input type="submit" value="+" onclick="add()">
+    <input type="submit" value="-" onclick="sub()">
+    <input type="submit" value="/" onclick="div()">
+    <input type="submit" value="*" onclick="mul()">
+    <input type="submit" value="%" onclick="mod()">
+    <script>
+        function add(){
+            // alert("Oluwatobiloba")
+            const first = document.querySelector('.first')
+            const second = document.querySelector('#second')
+            alert(+(first.value) + +(second.value))
+            first.value = ''
+            second.value = ''
+        }
+
+
+
+        function sub(){
+            // alert("Oluwatobiloba")
+            const first = document.querySelector('.first')
+            const second = document.querySelector('#second')
+            alert(+(first.value) - +(second.value))
+            first.value = ''
+            second.value = ''
+        }
+
+
+        
+
+        function div(){
+            // alert("Oluwatobiloba")
+            const first = document.querySelector('.first')
+            const second = document.querySelector('#second')
+            alert(+(first.value) / +(second.value))
+            first.value = ''
+            second.value = ''
+        }
+
+
+        function mul(){
+            // alert("Oluwatobiloba")
+            const first = document.querySelector('.first')
+            const second = document.querySelector('#second')
+            alert(+(first.value) * +(second.value))
+            first.value = ''
+            second.value = ''
+        }
+
+        function mod(){
+            // alert("Oluwatobiloba")
+            const first = document.querySelector('.first')
+            const second = document.querySelector('#second')
+            alert(+(first.value) % +(second.value))
+            first.value = ''
+            second.value = ''
+        }
+    </script>
+</body>
+</html>

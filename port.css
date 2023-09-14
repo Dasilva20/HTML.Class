@@ -1,0 +1,130 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    border: none;
+    outline: none;
+}
+
+:root{
+    --bg-color: #191919;
+    --second-bg-color: #101010;
+    --main-color: #e9204f;
+    --text-color: #fff;
+    --second-color: #e4e4e4;
+    --other-color: #c6c9d8bf;
+
+    --h1-font: 7rem;
+    --h2-font: 3.5rem;
+    --p-font: 1.1rem;
+}
+body{
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+.logo img{
+    width: 20%;
+    height: 10%;
+}
+
+.navlist{
+    display: flex;
+}
+
+.navlist a{
+    color: var((--second-color));
+    font: var(--p-font);
+    font-weight: 600;
+    margin: 0 40px;
+    transition: all ease .40s;
+}
+
+.navlist a:hover{
+    color: var(--text-color);
+}
+
+#menu-icon{
+    font-size: 42px;
+    color: var(--text-color);
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000; /* is a css property that defines the order of overlapping HTML element. Elemets with a higher index
+    will be place on top of element with a lower index.*/
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    padding: 28px 11%;
+    border-bottom: 1px solid transparent;
+    transition: all ease .50s;
+}
+
+section{
+    padding: 120px 19% 100px;
+}
+
+.home{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background: url(Images/man.png);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.home-text h3{
+    color: var(--second-color);
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    word-spacing: 10px;
+}
+
+.home-text h1{
+    font-family: 'Dosis', sans-serif;
+    font-size: var(--h1-font);
+    color: var(--text-color);
+    font-weight: 800;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.home-text h4{
+    color: var(--second-color);
+    font-size: 25px;
+    font-weight: 600;
+    word-spacing: 15px;
+    margin-bottom: 3.5rem;
+}
+
+.btw{
+    display: inline-block;
+    padding: 16px 45px;
+    background: var(--main-color);
+    color: var(--text-color);
+    font-size: var(--p-font);
+    font-weight: 600;
+    border: 2px solid var(--main-color);
+    transition: all ease .50s;
+}
+
+.btw:hover{
+    transform: translate(5px);
+    background: transparent;
+    border: 2px solid var(--main-color);
+}
+

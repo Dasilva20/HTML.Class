@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- Jquery is a javascript libriry for providing  -->
+    <p id="show"></p>
+    <button id="display">Display</button>
+
+    <br><br>
+
+    <form id="records">
+        <input type="text" id="name" name="name" placeholder="Enter your name">
+
+        <br><br>
+
+        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+
+        <br>
+
+        <button type="submit">view</button>
+    </form>
+    <script>
+        $(document).ready(function(){
+            $("#show").text("Welcome to jquery class");
+        })
+
+        $(document).ready(function(){
+            $("#display").click(function(){
+                alert("We are ready for today")
+            })
+        })
+
+        $(document).ready(function(){
+            $('#records').submit(function(){
+                var user = $('#name').val();
+                var msg = $('#message').val();
+                alert(user + ' ' + msg)
+            })
+        })
+    </script>
+</body>
+</html>

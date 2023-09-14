@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0%;
+        min-height: 100vh;
+    }
+    button{
+        background-color: #1aaca4;
+        color: #ffffff;
+        padding: 1rem;
+        border-radius: 4px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+    .popup-container{
+        display: none;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        left: 0%;
+        right: 0%;
+        top: 0%;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.466);
+    }
+
+    .popup-container.active{
+        display: flex;
+    }
+
+    .popup{
+        position: relative;
+        background-color: rgb(224, 221, 221);
+        padding: 2rem;
+        width: 500px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px rgb(100, 90, 90)
+    }
+
+    body.dark{
+        background-color: rgb(201, 196, 196);
+        color: rgb(248, 83, 17);
+    }
+
+    .popup button{
+        position: absolute;
+        top: 0;
+        right: 1px;
+        color: rgb(0, 0, 0);
+        background-color: rgb(224, 221, 221);
+        cursor: pointer;
+        font-size: medium;
+    }
+
+    label{
+        user-select: none;
+        background-color: rgb(212, 211, 211);
+        border-radius: 50px;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    input{
+        visibility: hidden;
+    }
+
+    .toggle-container{
+        position: fixed;
+        top: 8rem;
+        right: 2rem;
+        display: flex;
+    }
+
+</style>
+<body>
+    <button id="open">Open</button>
+    <div class="popup-container" id="container">
+        <div class="popup">
+            <button id="close">&times;</button>
+            <h1>Quote</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui omnis sed labore a aut aspernatur id, minima voluptatum distinctio assumenda.</p>
+        </div>
+    </div>
+    <script>
+        const open = document.querySelector("#open")
+        const container = document.querySelector('.popup-container')
+        open.addEventListener('click', ()=> {
+            container.classList.add("active")
+        })
+
+        const close = document.querySelector("#close")
+        close.addEventListener('click', ()=> {
+            container.classList.remove("active")
+        })
+
+
+        const toggle = document.getElementById('toggle');
+        toggle.addEventListener("change", (e) => {
+            console.log(e.target.checked)
+            document.body.classList.toggle('dark', e.target.checked);
+        });
+    </script>  
+    
+    
+    <div class="toggle-container">
+        <input type="checkbox" id="toggle" name="toggle">
+        <label for="toggle"></label>
+    </div>
+</body>
+</html>

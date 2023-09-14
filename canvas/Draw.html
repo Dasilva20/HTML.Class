@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="draw" width="400" height="500"></canvas>
+    <script>
+        const draws = document.querySelector('#draw');
+        const drawProject = draws.getContext("2d");
+        let isDrawing = false;
+        drawProject.linewidth = 2;
+        drawProject.strokeStyle = "black";
+        function startDrawing(e) {
+            isDrawing = true;
+            drawProject.beginPath();
+            drawProject.moveTo(e.clientX - draws.offsetLeft,
+                e.clientY - draw.offsetTop)
+        }
+
+        function draw(e) {
+            if (!isDrawing)
+                return;
+            drawProject.lineTo(e.clientX - draws.offsetLeft, e.clientY -
+                draws.offsetTop)
+                drawProject.stroke()
+        }
+
+        function stopDrawing(){
+            isDrawing = false
+            drawProject.closePath()
+        }
+
+        draws.addEventListener("mousedown",
+        startDrawing)
+        draws.addEventListener("mousemove",
+        draw)
+        draws.addEventListener("mouseup",
+        stopDrawing)
+        draws.addEventListener("mouseout",
+        stopDrawing)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        number = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
+        document.write(number[6], "<br>");
+        document.write(number.lenght, "<br>");
+        document.write(number[number.lenght - 1]);          
+   
+        // // array constructor   
+        // const numbers = new Array(1, 2, 3, 4, 5)
+        // console.log(numbers[2]);
+        
+        // //Array object
+        // var arrayName = ["Agela", "Emma", "Peter", "Oluebeobe"];
+        // document.write(arrayName)
+
+        // //Push: This is used to add item at the end of an arry. it works as append
+        // arrayName.push("Nakamoto");
+        // document.write(arrayName, "<br/>")
+
+        // //Shift. it is used to remove the first item in an arry, we use shift()
+        // arrayName.shift();
+        // document.write(arrayName);
+
+        // //Unshift. it is used to add a new item at the beginning of an array
+        // arrayName.unshift("Tobi");
+        // document.write(arrayName)
+
+        // //pop. it is used to remove the last item in an arry
+        // arrayName.pop();
+        // document.write(arrayName);
+
+        // //splice is used to replace an arry, but you must specify the starting poin,and how many times you want to
+        // //remove... you can add more than one item at a time
+        // arrayName.splice(0, 2, "lerhrer", "deutchlent");  // here we start from index 0, and removed 2 items. 
+        // //and replace it with lerhre and deutchlent
+        // document.write(arrayName)
+
+        // //sort is used to arrange items in ascending order
+        // arrayName.sort(desc);
+        // document.write(arrayName);
+
+        // // isarray is used if an item is in an arry. it is used to if a variable is an arry.. it returns boolean
+        // document.write(Array.isArray(arrayName));
+        
+        // //multy dimentional arry, this is having more tahn one arry in an arry
+        // var multiArray = [
+        //     [1, 2, 3,],
+        //     [4, 5, 6,],
+        //     [7, 8, 9,],
+        // ];
+
+        // // To return 2 first, tardet the index of the arry thst have 2, then target the index of 2.
+        // document.write(multiArray[0][1]);
+
+        // // how to pass in value in an empty arry
+        // var food = new Array();
+        // food[2] = "yam";
+        // food[3] = "egg";
+        // food[4] = "meat"; // not valuses cannot take the same index number if not it will display the last one
+        // document.write(food);
+
+        // for (a = 0; a <= 3; a++){
+        //     for (b = 0; b <= 3; b++){
+        //         document.write(a, b, "<br>");
+        //     }
+        // }
+
+
+
+
+        //    var arraySize = window.prompt("How many cars do you plan to list?")
+
+        //    MyArray = new Array(arraySize);
+
+        //    for(row = 0; row < arraySize; row ++){
+        //     MyArray[row] = new Array(3)
+        //     MyArray[row][0] = prompt("type of car?")
+        //     MyArray[row][1] = prompt("Colour of car?")
+        //     MyArray[row][2] = prompt("sales price?")
+        //    }
+
+        //    document.write("Cars" + `&nbsp; &nbsp; &nbsp;` + "Colour" + `&nbsp; &nbsp; &nbsp;`
+        //    + "Price" + "<hr/>")
+
+        //    for(row = 0; row < arraySize; row ++){
+        //     for(column + 0; row <3; column++){
+        //         document.write(MyArray[row][column] + `&nbsp; &nbsp; &nbsp;`);
+        //     }
+        //     document.write(<hr/>)
+        //    }
+    </script>
+</body>
+</html>

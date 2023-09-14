@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas class="circle"></canvas>
+    <!-- Drawing a circle
+    1. beginPath
+    2. arc(x,y,radius, startAngle, endAngle) -->
+
+    <script>
+        const canvas = document.querySelector('.circle');
+        const circleShape = canvas.getContext("2d");
+        circleShape.beginPath(),
+        // circleShape.arc(150, 150, 50, 0, 2*Math.PI);
+        circleShape.arc(95, 70, 50, 0, 2*Math.PI);
+
+        circleShape.fillStyle = 'green';
+        // circleShape.fill()
+        circleShape.stroke()
+
+        // Drawing a triangle
+        const triShape = canvas.getContext("2d")
+
+        triShape.beginPath();
+        triShape.lineTo(20, 100);
+        triShape.lineTo(100, 20);
+        triShape.lineTo(176, 100);
+        triShape.lineTo(20, 100)
+        triShape.strokeStyle = 'red';
+        triShape.fillStyle = 'yellow';
+        // triShape.fill();
+        triShape.stroke()
+
+        // Drawing a tripezium
+        const trapeShape = canvas.getContext('2d')
+        trapeShape.beginPath();
+        trapeShape.moveTo(20, 20);
+        trapeShape.lineTo(100, 20);
+        trapeShape.lineTo(175, 100);
+        trapeShape.lineTo(20, 100);
+        trapeShape.lineTo(20, 20);
+        // trapeShape.stroke()
+
+    </script>
+</body>
+</html>

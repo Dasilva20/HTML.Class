@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>location</title>
+</head>
+<body>
+    <p>click the button to display the hostname and port number of current url.</p>
+
+    <button onclick="myFunction()">Try it</button>
+    <p id="info"></p>
+
+    <p>click the button to display the entire url of the current page.</p>
+
+    <button onclick="myFunction()">Try it</button>
+    <p id="more"></p>
+
+
+    <script>
+        function myFunction(){
+            // this specifies the name: port portion of the url
+            var x = location.host
+            document.getElementById("info").innerHTML = x;
+        }
+
+        // to launch you to a new page using url
+        function myhref(){
+            document.write("You are leaving this page to the next page");
+            location.href = "show_hide_new.html";
+        }
+    </script>
+</body>
+</html>

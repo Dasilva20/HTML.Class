@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+               // Expression function
+        // function show(){
+        //     document.write("Welcome to js clss on function")
+        // }
+        // show()
+
+        // function show(){
+        //     return("Welcome to js clss on function")
+        // }
+        // document.write(show())
+
+
+        // function add(a,b){
+        //     return(a * b)
+        // }
+        // document.write(add(2, 1.6))
+
+
+        // // Declaerative function
+
+        // var info = function(){
+        //     return("Welcome to NIIT")
+        // }
+        // document.write(info())
+
+        // Arrow function
+
+        // var info = ()=>document.write("Welcome to NIIT, lagos")
+        
+        // info()
+
+        // var info = ()=>{
+        //     document.write("Welcome to NIIT")
+        //     document.write("Welcome to NIIT")
+        //     document.write("Welcome to NIIT")
+        // }
+        // document.write(info())
+
+        // var info = () => {
+        //     return("Will you eate the food now?")
+        // }
+        // document.write(info())
+
+        // dep = parseInt(prompt("How much would you like to deposite"))  // can also use  "+"
+        // wit = parseInt(prompt("How much would you like to withdraw?"))
+        // function deposite(dep){
+        //     return(dep)
+        // } 
+
+        // function withdraw(wit){
+        //     return(wit)
+        // }
+
+        // function bal(){
+        //     return(deposite(dep) - withdraw(wit))
+        // }
+        // document.write(bal())
+
+        
+        
+        // assignment
+
+        document.write("Good Day." + "<br/>")
+        sal = +(prompt("How much is your salary?"))
+
+        // // Allowance 
+        function salary(sal){
+            return(sal)
+        }
+
+        function housing(){
+            return(salary(sal) * 0.02)
+        }
+        document.write("Your housing allowance is #" + housing() + "<br/>")
+
+        function clothing(){
+            return(salary(sal) * 0.015)
+        }
+        document.write("Your clothing allowance is #" + clothing() + "<br/>")
+
+        function travelling(){
+            return(salary(sal) * 0.021)
+        }
+        document.write("Your travelling allowance is #" + travelling() + "<br/>")
+
+             // Total allowance
+        function total_allowance(){
+            return(housing() + clothing() + travelling())
+        }
+        document.write("Your total allowance is #" + total_allowance() + "<br/>")
+
+        
+        // Decuction                       tax = 0.017,  due = 0.01
+        function tax(){
+            return(salary(sal) * 0.017)
+        }
+        document.write("Your tax is #" + tax() + "<br/>")
+        
+        function due(){
+            return(salary(sal) * 0.01)
+        }
+        document.write("Your deu is #" + due() + "<br/>")
+
+        // Total deduction
+        function total_deduction(){
+            return(tax() + due() + "<br/>")
+        }
+        document.write("Your total deduction is #" + total_deduction() + "<br/>")
+
+        // Gross pay
+        function gross_pay(){
+            return(salary(sal) + total_allowance() + "<br/>")
+        }
+        document.write(gross_pay() + "<br/>")
+
+        // Net pay
+        net_pay = gross_pay() - total_deduction()
+        console.log(typeof(total_deduction()))
+        document.write(gross_pay() - total_deduction())
+        // function net_pay(){
+        //     return(gross_pay() - total_deduction())
+        // }
+        // document.write(net_pay() + "<br/>")
+
+    </script>
+</body>
+</html>

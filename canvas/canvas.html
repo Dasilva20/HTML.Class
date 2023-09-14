@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing rectangle/square</title>
+</head>
+<body>
+    <!-- canvas is an element in html that provide drawing surface on which you can render graphics animetions and interactive contents -->
+    
+    <canvas id="canvas" width="400" height="400"></canvas>
+    <input type="submit" value="submit" id="clear">
+
+    <script>
+        const canvas = document.getElementById('canvas')
+        const  btn = document.getElementById('clear')
+        const content = canvas.getContext('2d')
+        const triShape = canvas.getContext('2d')
+
+        content.beginPath();
+        content.moveTo(70, 30);
+        // content.lineTo(100, 1004)
+        content.strokeStyle = 'red'
+        content.stroke()
+
+        btn.addEventListener('click', (e)=>{
+            // console.log(e.target)
+            // content.clearRect(0,0, canvas.width, canvas.height) // this will clear all the element in a canvas
+            triShape.clearRect(50, 50, 100, 100)  // this will clear the particular element specified in canvas
+            
+        })
+        triShape.fillStyle = 'violet';
+        triShape.fillRect(0, 0, 400, 100)
+        triShape.strokeStyle = 'red';
+        triShape.stroke()
+    </script>
+</body>
+</html>

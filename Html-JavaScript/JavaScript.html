@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // // code for coditional statement 
+        // // if-else-if
+
+        // // 70 - 100 === A 
+        // // 60 - 69 === B 
+        // // 50 - 59 === C
+        // // 45 - 49 === D 
+        // // 40 - 44 == E 
+        // // 0 - 39 === F
+
+        const dial = prompt("Dial a *312#")
+        if (dial == "*312#"){
+            alter("welcome to Airtel, Dial \n 1. Data \n 2. Borrow airtime \n 3. Balance \n 4. Bundle \n 5. Business plan")
+            var record = prompt("Enter a number")
+            if(record == '1'){
+                alter("Buy Data, \n 1. 100 for 100MB\n 2. 200 for 250MB \n 3. 500 for 1.5GB")
+                var data = prompt("Enter a number.")
+                if(data == '1'){
+                    document.write("Your account have been credited with 100MB")
+                }
+                else if (data == '2'){
+                    document.write("Your account have been credited with 250MB")
+                }
+                else if (data == '3'){
+                    document.write("Your account have been credited with 1.5GB")
+                }
+                else{
+                    document.write("You entered a wrong number")
+                }
+            }
+            else if(record == '2'){
+                alter("Borrow \n 1. #500 \n 2. #200 \n 3. #50")
+                var borrow = prompt("Enter a number.")
+                if(borrow == '1'){
+                    document.write("You have successfully borrow #500 airtime")
+                }
+                else if(borrow == '2'){
+                    document.write("You have successfully borrow #200 airtime")
+                }
+                else if(borrow == '3'){
+                    document.write("You have successfully borrow #50 airtime")
+                }
+                else{
+                    document.write("You have entered a wrong input.")
+                }
+            }
+            else if(record == '3'){
+                document.write("Please kindly check your SMS for your balance.")
+            }
+            else if(record == '4'){
+                alter("Bunbles \n 1. Daily \n 2. Weekly \n 3. Monthly")
+                var bundle = prompt("Enyrt a number")
+                if (bundle == "1"){
+                    alert("Daily bundle \n 1. #100(150MB) for 2 days \n 2. #500(500MB) for 3 days \n 3. #500(200MB) for 4 days")
+                    var daily = prompt("Enter a number")
+                    if(daily == "1"){
+                        document.write("Your purchase was successful")
+                    }
+                    else if(daily == "2"){
+                        document.write("Your purchase was successful")
+                    }
+                    else if(daily == "3"){
+                        document.write("Your purchase was successful")
+                    }
+                    else{
+                        document.write("You entered a wrong input")
+                    }
+                }
+                else if(bundle == "2"){
+                    alert("Weekly bundle \n 1. #500(400MB) for a week \n 2. #700(1GB) for 2 weeks \n 3. #1,000(1.5GB)")
+                    var weekly = prompt("Enter a number")
+                    if(weekly = "1"){
+                        document.write("Your purchase of 400MB was successful")
+                    }
+                    else if(weekly == "2"){
+                        document.write("Your purchase of 1GB was successful")
+                    }
+                    else if(weekly == "3"){
+                        document.write("Your purchase of 1.5GB was successful")
+                    }
+                    else{
+                         document.write("You have enter a wrong input")
+                    }
+                }
+                else if(bundle == "3"){
+                    alert("Monthly bundle \n 1. #1,000(1.5GB) for a month \n 2. #1,500(2GB) \n 3. #2,000(3.5GB)")
+                    var monthly = prompt("Enter a number")
+                    if(monthly == "1"){
+                        documen.write("Your purchase of 1.5GB was succeessful")
+                    }
+                    else if(monthly == "2"){
+                        document.write("Your purchase of 2GB was succeessful")
+                    }
+                    else if(month == "3"){
+                        document.write("Your purchase of 3.5GB was succeessful")
+                    }
+                    else{
+                        document.write("You have entered a wrong number")
+                    }
+                }
+            }
+            else if(record == "5"){
+                document.write("Sorry, this service is not availabe.")
+            } 
+        }
+        else{
+            document.write("You have entered a wrong input.")
+        }
+
+
+        // const point = 11
+        // switch(point){
+        //     case 10:
+        //     case 11:
+        //         document.write("Good")
+        //         break
+
+        //     case 12:
+        //         document.write("Very Good")
+        //         break
+
+        //     default:
+        //         document.write(Excellent)
+        // }
+        // assignment
+
+        // const q1 = prompt("1. What is the capital of turkey?")
+
+        // switch(q1){
+        //     case "ankara":
+        //         q1_score = 1
+        //         break
+        //     default:
+        //         q1_score = 0
+        // }
+        
+
+
+        // const q2 = prompt("2. What is the capital of Mali?")
+        // switch(q2){
+        //     case "bamako":
+        //         q2_score = 1
+        //         break
+        //     default:
+        //         q2_score = 0
+        // }
+        
+        
+        // const q3 = prompt("3. What does ice become when you heat it?")
+        // switch(q3){
+        //     case "water":
+        //         q3_score = 1      
+        //         break
+        //     default:
+        //         q3_score = 0
+        // }
+
+
+        // const q4 = prompt("4. What adjective is opposite to Plural?")
+        // switch(q4){
+        //     case "singular":
+        //         q4_score = 1
+        //         break
+        //     default:
+        //         q4_score = 0
+        // }
+
+
+        // const q5 = prompt("5. What is the antonym of predecessor?")
+        // switch(q5){
+        //     case "successor":
+        //         q5_score = 1
+        //         break
+        //     default:
+        //         q5_score = 0
+        // }
+
+
+        // const q6 = prompt("6. On a computer, what is Times New Roman an example of?")
+        // switch(q6){
+        //     case "font":
+        //         q6_score = 1
+        //         break
+        //     default:
+        //         q6_score = 0
+        // }
+
+
+        // const q7 = prompt("7. What is three quarters expressed as a percentage?")
+        // switch(q7){
+        //     case "75%":
+        //         q7_score = 1
+        //         break
+        //     default:
+        //         q7_score = 0
+        // }
+
+
+        // const q8 = prompt("8. Paper manufacturing results in the destruction of what natural resource?")
+        // switch(q8){
+        //     case "wood":
+        //         q8_score = 1
+        //         break
+        //     default:
+        //         q8_score = 0
+        // }
+
+
+        // const q9 = prompt("9. Which field of study uses the periodic table?")
+        // switch(q9){
+        //     case "chemistry":
+        //         q9_score = 1
+        //         break
+        //     default:
+        //         q9_score = 0
+        // }
+
+
+        // const q10 = prompt("10. What is the name of the punctuation mark that shows the end of a sentence?")
+        // switch(q10){
+        //     case "period" || "full stop":
+        //         q10_score = 1
+        //         break
+        //     default:
+        //         q10_score = 0
+        // }
+
+
+        // total = q1_score + q2_score + q3_score + q4_score + q5_score + q6_score + q7_score + q8_score
+        // + q9_score + q10_score 
+
+        // if(total >= 8){
+        //     grade = "A"
+        // }     
+        // else if(total == 7 || total == 6){
+        //     grade = "B"
+        // }
+        // else if(total == 5){
+        //     grade = "C"
+        // } 
+        // else if(total == 4 || total == 3){
+        //     grade = "D"
+        // }
+        // else if(total == 1 || total == 2){
+        //     grade = "E"
+        // }
+        // else{
+        //     grade = "F"
+        // }
+        
+        // document.write("Your score is "+ total +" and your grade is "+ grade)
+    </script>
+</body>
+</html>
